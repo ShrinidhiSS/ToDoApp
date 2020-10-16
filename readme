@@ -6,6 +6,7 @@ Delete tasks once they are completed.
 Will add other functionalities soon.
 -login
 -datetime picker
+-modify todo
 -set reminder for deadlined tasks
 
 Will be later deployed in heroku after adding those features.
