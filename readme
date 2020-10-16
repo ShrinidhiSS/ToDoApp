@@ -1,0 +1,11 @@
+# ToDoApp
+
+Add list of tasks to be done using this web app.
+Delete tasks once they are completed.
+
+Will add other functionalities soon.
+-login
+-datetime picker
+-set reminder for deadlined tasks
+
+Will be later deployed in heroku after adding those features.
