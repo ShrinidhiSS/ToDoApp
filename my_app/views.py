@@ -20,8 +20,13 @@ def todoAdd(request):
     return render(request,'my_app/todo_form.html',context)
 
 def todoDelete(request,pk):
+    object = TodoList.objects.get(id=pk)
+    object.delete()
+    context = {
+        'tasks':TodoList.objects.all()
+    }
+    return render(request,'my_app/todo_form.html',context)
 
-    pass
 
 # class TaskListView(ListView):
 #     model = TodoList
