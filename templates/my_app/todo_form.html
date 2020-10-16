@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form class="mt-4" method="POST" action="{% url 'add' %}">
+    {% csrf_token %}
+  <div class="row col-sm-12">
+    <div class="col col-sm-11">
+      <input type="text" class="form-control" name="content" placeholder="Todo task">
+    </div>
+      <button type="submit" class="btn btn-primary" name="action">Add</button>
+  </div>
+</form>
+
+
+<div class="col mt-4">
+    <ul class="list-group">
+        {% for task in tasks %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">{{ task.task }}
+            <a href="#" class="btn btn-success">Done</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+{% endblock content%}
